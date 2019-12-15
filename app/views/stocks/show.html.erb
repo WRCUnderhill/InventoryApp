@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @stock.level %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @stock.item_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @stock.location_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @stock.product_id %>
+</p>
+
+<p>
+  <strong>Channel:</strong>
+  <%= @stock.channel_id %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>

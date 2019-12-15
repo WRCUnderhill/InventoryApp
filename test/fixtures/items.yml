@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  channel_item_id: MyString
+  channel_inventory_id: MyString
+  price: MyString
+  product: one
+  channel: one
+
+two:
+  name: MyString
+  channel_item_id: MyString
+  channel_inventory_id: MyString
+  price: MyString
+  product: two
+  channel: two

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Channel location:</strong>
+  <%= @location.channel_location_id %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @location.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @location.country %>
+</p>
+
+<p>
+  <strong>Nonstocking:</strong>
+  <%= @location.nonstocking %>
+</p>
+
+<p>
+  <strong>Channel:</strong>
+  <%= @location.channel_id %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

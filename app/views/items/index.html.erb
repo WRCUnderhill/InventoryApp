@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Channel item</th>
+      <th>Channel inventory</th>
+      <th>Price</th>
+      <th>Product</th>
+      <th>Channel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.channel_item_id %></td>
+        <td><%= item.channel_inventory_id %></td>
+        <td><%= item.price %></td>
+        <td><%= item.product_id %></td>
+        <td><%= item.channel_id %></td>
+        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>

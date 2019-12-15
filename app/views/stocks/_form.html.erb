@@ -1,0 +1,42 @@
+<%= form_with(model: stock, local: true) do |form| %>
+  <% if stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
+
+      <ul>
+        <% stock.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_id %>
+    <%= form.text_field :item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_id %>
+    <%= form.text_field :location_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :channel_id %>
+    <%= form.text_field :channel_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

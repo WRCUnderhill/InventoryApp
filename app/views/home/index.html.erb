@@ -1,0 +1,43 @@
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    ShopifyApp.ready(function(){
+      ShopifyApp.Bar.initialize({ title: "Home" });
+    });
+  </script>
+<% end %>
+<h2>Products</h2>
+
+Number of products is <%= @db_products.length %>
+
+<ul>
+  <% @db_products.each do |product| %>
+    <li> product name is <%= product.name %>
+         product id is <%= product.channel_product_id %>
+         product type is <%= product.label_1 %>
+  <% end %>
+</ul>
+<hr>
+<h2>Locations</h2>
+
+Number of locations is <%= @db_locations.length %>
+
+<ul>
+  <% @db_locations.each do |location| %>
+    <li> location name is <%= location.name %>
+         location id is <%= location.channel_location_id %>
+         location city is <%= location.city %>
+         location country is <%= location.country %>
+         location stocking? <%= (!location.nonstocking).to_s %>
+  <% end %>
+</ul>
+
+<hr>
+<h2>Items</h2>
+<p> There are <%= @db_items.length %> items </p>
+
+
+<hr>
+<h2>Stock Levels</h2>
+<p> There are <%= @db_stocks.length %> Stock Levels </p>
+
+<hr>

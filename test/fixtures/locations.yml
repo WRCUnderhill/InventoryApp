@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  channel_location_id: MyString
+  city: MyString
+  country: MyString
+  nonstocking: false
+  channel: one
+
+two:
+  name: MyString
+  channel_location_id: MyString
+  city: MyString
+  country: MyString
+  nonstocking: false
+  channel: two

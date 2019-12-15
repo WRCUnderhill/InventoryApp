@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  channel_product_id: MyString
+  label_1: MyString
+  label_2: MyString
+  label_3: MyString
+  channel: one
+
+two:
+  name: MyString
+  channel_product_id: MyString
+  label_1: MyString
+  label_2: MyString
+  label_3: MyString
+  channel: two

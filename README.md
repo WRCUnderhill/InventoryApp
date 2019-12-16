@@ -50,56 +50,43 @@ own data formats.  So most data is kept as strings.  Ids may be integers for
 one channel or floats for another or strings for another.  They are all
 converted to strings within the app.  The data kept is
 
-Channel: only the name of the channel.
+Channel: 
+* only the name of the channel.
 
-Product: name - a descriptive string
-         id - the id used by the channel for the product (string)
-         channel_id - foreign key - the id of the channel to which this product
-         belongs.
+Product: 
+* name - a descriptive string  
+* id - the id used by the channel for the product (string)  
+* channel_id - foreign key - the id of the channel to which this product belongs.
 
-Location: name - a descriptive string
-          id - the id used by the channel for the location (string)
-          city - string
-          country - 2 letter code
-          channel_id - foreign key - the id of the channel to which this
-          location belongs.
+Location: 
+* name - a descriptive string
+* id - the id used by the channel for the location (string)
+* city - string
+* country - 2 letter code
+* channel_id - foreign key - the id of the channel to which this location belongs.
 
-Item:     name - a descriptive string
-          price - unit price (string)
-          inventory code - some channels keep separate product and inventory
-          codes for items (string)
-          product_id - foreign key - the id of the product to which this item
-          belongs.
-          channel_id - foreign key - the id of the channel to which this item
-          belongs.
+Item:     
+* name - a descriptive string
+* price - unit price (string)
+* inventory code - some channels keep separate product and inventory codes for items (string)
+* product_id - foreign key - the id of the product to which this item belongs.
+* channel_id - foreign key - the id of the channel to which this item belongs.
 
 Stock:  The count of a particular kind of item at a particular location
-          level - integer - count of a particular kind of item at a particular
-          location
-          item_id - foreign key - the id of the item to which this stock
-          belongs.
-          location_id - foreign key - the id of the loction to which this item
-          belongs.
-          product_id - foreign key - the id of the product to which this item
-          belongs.  Not strictly necessary, but included for convenience
-          channel_id - foreign key - the id of the channel to which this item
-          belongs.  Not strictly necessary, but included for convenience
+* level - integer - count of a particular kind of item at a particular location
+* item_id - foreign key - the id of the item to which this stock belongs.
+* location_id - foreign key - the id of the loction to which this item belongs.
+* product_id - foreign key - the id of the product to which this item belongs.  Not strictly necessary, but included for convenience
+* channel_id - foreign key - the id of the channel to which this item belongs.  Not strictly necessary, but included for convenience
 
-Stock Link: Gathering (find all) will allow calculation of aggregate quantities
-          for the same item across channels
-          item_id - foreign key - the id of the item which is sold across
-          channels
-          product_id - foreign key - the id of the product of the items which
-          is sold across channels
-          channel_id - foreign key - the id of the channel of the item which is
-          sold across channels
+Stock Link: Gathering (find all) will allow calculation of aggregate quantities for the same item across channels
+* item_id - foreign key - the id of the item which is sold across channels
+* product_id - foreign key - the id of the product of the items which is sold across channels
+* channel_id - foreign key - the id of the channel of the item which is sold across channels
 
-Location Link: Gathering (find all) will allow calculation of aggregate
-          quantities for the same item across channels
-          Loction_id - foreign key - the id of the location used across
-          channels
-          channel_id - foreign key - the id of the channel which uses the
-          location.
+Location Link: Gathering (find all) will allow calculation of aggregate quantities for the same item across channels
+* loction_id - foreign key - the id of the location used across channels
+* channel_id - foreign key - the id of the channel which uses the location.
 
 This is the key data needed to calculate the display of how the stock is
 distributed across the merchant's locations and channels

@@ -1,4 +1,4 @@
-# H1 CROSS CHANNEL INVENTORY DISPLAY AND VALUE MAP
+# CROSS CHANNEL INVENTORY DISPLAY AND VALUE MAP
 
 The proposed business purpose is to help the merchant by making it easy to see
 where money is tied up in inventory across multiple channels.  The merchant can
@@ -18,6 +18,14 @@ table, where columns represent locations  and rows represent the items.  The
 top row would name the locations and the total of the value of the inventory
 at that location.  The left most column would give identify the item and the
 total value of that item across all locations
+
+|            |Shopify      | other channel 1| other channel n|
+|------------|:-----------:|:--------------:|:--------------:|
+|            | total value |  total value   |   total value  |
+|item 1 total value  |  quantity   |    quantity    |    quantity    |
+| |             |                |                |
+|item n total value  |  quantity   |    quantity    |    quantity    |
+| |             |                |                |
 
 In a more advanced version, it would be possible select which of these are
 displayed.
